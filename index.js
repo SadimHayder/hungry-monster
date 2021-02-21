@@ -30,9 +30,7 @@ function searchMeal(e) {
                 resultHeading.innerHTML = `<h2>There Are No Result for ${term}`;
             } else {
                  mealEl.innerHTML = data.meals.map(
-                    (meal) => `
-                    <div class="meal">
-                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+                    (meal) => `echo "# hungry-monster" >> README.md<img src="${meal.strMealThumb}" alt="${meal.strMeal}">
                     <div class="meal-info" data-mealId="${meal.idMeal}">
                     <h3>${meal.strMeal}</h3>
                     </div>
@@ -59,19 +57,6 @@ function getMealById(mealID) {
             addMealToDOM(meal);
         });
 }
-// add meal to dom
-// function addMealToDOM(meal) {
-//     const ingredients = [];
-//     for(let i=0; i <=20; i++){
-//         if (meal[`strIngredients${i}`])
-//         ingredients.push(`
-//         ${meal[`strIngredients${i}`]} - ${meal[`strMeasure${i}`]}
-//         `);
-//         }else {
-//           break;
-//     }
-  
-// }
 
 // event listerners
 submit.addEventListener("submit", searchMeal);
